@@ -2,3 +2,22 @@
     margin: 5% 5% 0;
 }
 
+.A_map_size{
+    width: 40%;
+    height: 40% ;
+    float: left;
+}
+
+.C_map_size{
+    width: 30%;
+    height: 35%;
+    float: left;
+    margin-left: 30%;
+    margin-bottom: 5px;
+}
+
+.B_map_size{
+    width: 70%;
+    height: 60%;
+    margin-left: 10%;
+}
