@@ -60,7 +60,29 @@
   <div class="container" >
     <a href="total_map.html"><button type="button" class="btn btn-info btn-primary btn-lg btn-menu">사물함신청</button> </a>
     <a href="total_map.html"><button type="button" class="btn btn-info  btn-lg btn-menu">사물함변경</button> </a>
-    <a href=""><button type="button" class="btn btn-info btn-lg btn-menu" >사물함취</button> </a>
+    <button type="button" class="btn btn-info btn-lg btn-menu" data-toggle="modal" data-target="#myModal">사물함취소</button>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">사물함 신청 취소</h4>
+          </div>
+          <div class="modal-body">
+            학생의 __구역 __번 사물함  <br>
+            신청을 취소하시겠습니까??  <br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
 
