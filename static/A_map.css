@@ -26,3 +26,11 @@ table{
 }
 
 */
+.highlighted {
+         color: #261F1D;
+         background-color: #E5C37E;
+     }
+    td:hover, td.alt:hover {
+        color: #261F1D;
+        background-color: #E5C37E;
+    }
