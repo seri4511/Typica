@@ -104,7 +104,7 @@
         <dt>아이디와 비밀번호를 입력하세요</dt>
     </dl>
 
-    <form id="login_form" action="login_validate.html" method="get" >
+    <form id="login_form" action="login_validate.html" method="POST" >
         <table class="login_input_field">
             <tr id="login_id">
                 <td > ID:</td>
@@ -115,26 +115,26 @@
                 <td>Password: </td>
                 <td><input type="password" class="col-xs-8" name="password" id="password"/> </td>
             </tr>
-</div>
 
-<div id="main_button">
-    <div class="container" >
-        <tr>
-            <td colspan="1">
-                <button type="submit" id="submit_button" class="btn btn-info btn-primary btn-lg btn-menu" >로그인</button>
-            </td>
-            <td colspan="1">
 
-                <button type="button" id="searching_button" class="btn btn-info btn-primary btn-lg btn-menu">비밀번호찾기</button>
+        <div id="main_button">
+            <div class="container" >
+                <tr>
+                    <td colspan="1">
+                        <button type="submit" id="submit_button" class="btn btn-info btn-primary btn-lg btn-menu" >로그인</button>
+                    </td>
+                    <td colspan="1">
 
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" id="password_waring_caption">
-            </td>
-        </tr>
+                    <button type="button" id="searching_button" class="btn btn-info btn-primary btn-lg btn-menu">비밀번호찾기</button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="password_waring_caption">
+                    </td>
+                </tr>
         </table>
-
+    </form>
         <FORM>
             <dl class="important_information">
                 <dt>*공지사항*</dt>

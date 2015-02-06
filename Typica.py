@@ -64,10 +64,10 @@ def login():
 @app.route('/login_test',  methods=["POST"])
 def login_test():
     if request.method == "POST":
-        id = request.form['id']
+        id = request.form['ID']
         password = request.form['password']
 
-        user = query_db('''select * from User where StudentID = %s''', [id], one=True)
+        user = query_db('''select * from User where idStudent = %s''', [id], one=True)
         print user
         print generate_password_hash(password)
         print user['UserPassword']
