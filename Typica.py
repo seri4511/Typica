@@ -12,7 +12,7 @@ app = Flask(__name__)
 mysql = MySQL()
 app = Flask(__name__)
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'wpswkd18^^'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'as147852'
 app.config['MYSQL_DATABASE_DB'] = 'typica_db'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
