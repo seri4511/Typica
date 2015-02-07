@@ -17,6 +17,12 @@
 
 
 <body>
+<script> $(document).ready(function(){
+  $("tr").click(function() {
+    $(this).closest("tr").siblings().removeClass("highlighted");
+    $(this).toggleClass("highlighted");
+  })
+});</script>
 <!-- Wrap all page content here -->
 <div id="navi_part">
 
@@ -50,65 +56,39 @@
   </div>
 </div>
 
-<div id="body">
+<div id="body"  onclick="alert('안녕하세요?')">
   <div class="A_first">
     <table border="1">
       <tr>
         <td bgcolor="aqua">3층</td>
-        <td>19</td>
-        <td>20</td>
-        <td>21</td>
-        <td>22</td>
-        <td>23</td>
-        <td>24</td>
-        <td>25</td>
-        <td>26</td>
-        <td>27</td>
-        <td>28</td>
-        <td>29</td>
-        <td>30</td>
-        <td>31</td>
-        <td>32</td>
-        <td>33</td>
-        <td>34</td>
-        <td>35</td>
-        <td>36</td>
+        <script>
+          var row = 37;
+          var number = 19;
+          for (number ; number<row; number++){
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
       </tr>
       <tr>
         <td bgcolor="aqua">2층</td>
-        <td>37</td>
-        <td>38</td>
-        <td>39</td>
-        <td>40</td>
-        <td>48</td>
-        <td>49</td>
-        <td>50</td>
-        <td>51</td>
-        <td>52</td>
-        <td>53</td>
-        <td>54</td>
-        <td>55</td>
+        <script>
+          var row = 55;
+          var number = 37;
+          for (number ; number<row; number++){
+
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
       </tr>
       <tr>
         <td bgcolor="aqua">1층</td>
-        <td>55</td>
-        <td>56</td>
-        <td>57</td>
-        <td>58</td>
-        <td>59</td>
-        <td>60</td>
-        <td>61</td>
-        <td>62</td>
-        <td>63</td>
-        <td>64</td>
-        <td>65</td>
-        <td>66</td>
-        <td>67</td>
-        <td>68</td>
-        <td>69</td>
-        <td>70</td>
-        <td>71</td>
-        <td>72</td>
+        <script>
+          var row = 73;
+          var number = 55;
+          for (number ; number<row; number++){
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
       </tr>
     </table>
   </div>
@@ -152,39 +132,45 @@
     </table>
     <table border="1" style="float: left">
       <tr>
-        <td>100</td>
-        <td>101</td>
-        <td>102</td>
-        <td>103</td>
-        <td>104</td>
-        <td>105</td>
+        <script>
+          var row = 106;
+          var number = 100;
+          for (number ; number<row; number++){
+
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">4층</td>
       </tr>
       <tr>
-        <td>106</td>
-        <td>107</td>
-        <td>108</td>
-        <td>109</td>
-        <td>110</td>
-        <td>111</td>
+        <script>
+          var row = 112;
+          var number = 106;
+          for (number ; number<row; number++){
+
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">3층</td>
       </tr>
       <tr>
-        <td>112</td>
-        <td>113</td>
-        <td>114</td>
-        <td>115</td>
-        <td>116</td>
-        <td>117</td>
+        <script>
+          var row = 118;
+          var number = 112;
+          for (number ; number<row; number++){
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">2층</td>
       </tr>
       <tr>
-        <td>118</td>
-        <td>119</td>
-        <td>120</td>
-        <td>121</td>
-        <td>122</td>
-        <td>123</td>
+        <script>
+          var row = 124;
+          var number = 118;
+          for (number ; number<row; number++){
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">1층</td>
       </tr>
     </table>
@@ -250,39 +236,47 @@
     </table>
     <table border="1" style="float: left" >
       <tr>
-        <td>124</td>
-        <td>125</td>
-        <td>126</td>
-        <td>127</td>
-        <td>128</td>
-        <td>129</td>
+        <script>
+          var row = 130;
+          var number = 124;
+          for (number; number<row; number++){
+
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">4층</td>
       </tr>
       <tr>
-        <td>130</td>
-        <td>131</td>
-        <td>132</td>
-        <td>133</td>
-        <td>134</td>
-        <td>135</td>
+        <script>
+          var row = 136;
+          var number = 130;
+          for (number; number<row; number++){
+
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">3층</td>
       </tr>
       <tr>
-        <td>136</td>
-        <td>137</td>
-        <td>138</td>
-        <td>139</td>
-        <td>140</td>
-        <td>141</td>
+        <script>
+          var row = 142;
+          var number = 136;
+          for (number ; number<row; number++){
+
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">2층</td>
       </tr>
       <tr>
-        <td>142</td>
-        <td>143</td>
-        <td>144</td>
-        <td>145</td>
-        <td>146</td>
-        <td>147</td>
+        <script>
+          var row = 148;
+          var number = 142;
+          for (number ; number<row; number++){
+
+            document.write("<td>"+number+"</td>");
+          }
+        </script>
         <td bgcolor="aqua">1층</td>
       </tr>
     </table>

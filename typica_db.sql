@@ -27,4 +27,8 @@ CREATE TABLE `TotalCabinet` (
   `Cabinet_Area` varchar(3) NOT NULL,
   `Cabinet_Number` varchar(45) NOT NULL,
   PRIMARY KEY (`idTotalCabinet`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+>>>>>>> Seri/master
