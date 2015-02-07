@@ -17,21 +17,17 @@ table{
     margin-top: 50px;
     width: 15%;
     height: 20%;
+    text-align: center;
 }
-.A_third{
-
-}
-#seulgi{
+#notimportant{
     height : 80 px;
 }
 
-*/
 .highlighted {
-         color: #261F1D;
-         background-color: #E5C37E;
-     }
-    td:hover, td.alt:hover {
-        color: #261F1D;
-        background-color: #E5C37E;
-    }
-
+    color: #261F1D;
+    background-color: #E5C37E;
+}
+td:hover, td.alt:hover {
+    color: #261F1D;
+    background-color: #E5C37E;
+}

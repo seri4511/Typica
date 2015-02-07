@@ -1,61 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <title>Fixed Nav + Sticky Footer</title>
-  <meta name="generator" content="Bootply" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!--[if lt IE 9]>
-  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="main_page.css" rel="stylesheet" type="text/css">
-</head>
 
 
 
-<body>
 
 
-<!-- Wrap all page content here -->
-<div id="navi_part">
-
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-default">
-    <div class="container">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Gachon University</a>
-      </div>
-
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">내정보 <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          <li class="out"><a href="#">로그아웃</a></li>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
-
-    </div>
-  </div>
-</div>
 
 
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='main_page.css')}}">
+{% extends "base.html" %}
+
+
+
+{% block content %}
 <div id="main_button">
   <div class="container" >
     <a href="total_map.html"><button type="button" class="btn btn-info btn-primary btn-lg btn-menu">사물함신청</button> </a>
@@ -87,18 +51,4 @@
 </div>
 
 
-
-<div id="footer">
-  <div class="container">
-    <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
-  </div>
-</div>
-
-<!-- script references -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-
-</body>
-
-</html>
+{% endblock %}
