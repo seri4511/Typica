@@ -67,10 +67,10 @@ def login_test():
         id = request.form['ID']
         password = request.form['password']
 
-        user = query_db('''select * from User where idStudent = %s''', [id], one=True)
+        user = query_db('''select * from Student where idStudent = %s''', [id], one=True)
         print user
         print generate_password_hash(password)
-        print user['UserPassword']
+        print user['password']
         if check_password_hash(user['StudentPW'], request.form['password']):
 
             session['user_id'] = user['idStudent']
