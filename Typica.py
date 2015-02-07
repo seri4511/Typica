@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from flask import Flask, render_template, request, make_response, url_for, session, g, redirect
 from flask.ext.mysql import MySQL
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -67,10 +68,10 @@ def login_test():
         id = request.form['ID']
         password = request.form['password']
 
-        user = query_db('''select * from User where idStudent = %s''', [id], one=True)
+        user = query_db('''select * from Studnet where idStudent = %s''', [id], one=True)
         print user
         print generate_password_hash(password)
-        print user['UserPassword']
+        print user['StudentPW']
         if check_password_hash(user['StudentPW'], request.form['password']):
 
             session['user_id'] = user['idStudent']
@@ -89,13 +90,23 @@ def login_test():
 def main():
     return render_template('main_page.html')
 
+@app.route('/a_map')
+def a_map():
+    return render_template('A_map.html')
+
+
+@app.route('/b_map')
+def b_map():
+    return render_template('B_map.html')
+
+@app.route('/C_map')
+def C_map():
+    return render_template('C_map.html')
 
 
 @app.route('/total_map')
 def total_map():
     return render_template('total_map.html')
-
-
 
 @app.route('/find')
 def find_password():
@@ -104,7 +115,7 @@ def find_password():
 
 @app.route('/change_first_pw')
 def change_first_pw():
-    return render_template('change_FirstPassword.html')
+    return render_template('change_FIrstPassword.html')
 
 
 @app.route('/adminstudent')
@@ -120,4 +131,3 @@ def adminfee():
 if __name__ == '__main__':
     app.debug = True
     app.run()
-
