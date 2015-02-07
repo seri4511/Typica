@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 <link rel="stylesheet" href="{{ url_for('static', filename='login_page.css')}}">
 {% extends "base.html" %}
 
@@ -16,15 +10,15 @@
     </dl>
 </header>
 
-<form class="form-signin" method="post" action="login_test">
+<div class="form-signin" >
 
-<div id="login_information_area">
-    <dl class="login_information">
-        <dt>로그인</dt>
-        <dt>아이디와 비밀번호를 입력하세요</dt>
-    </dl>
+    <div id="login_information_area">
+        <dl class="login_information">
+            <dt>로그인</dt>
+            <dt>아이디와 비밀번호를 입력하세요</dt>
+        </dl>
 
-    <form id="login_form" action="login_validate.html" method="POST" >
+    <form id="login_form" action="login_test" method="POST" >
         <table class="login_input_field">
             <tr id="login_id">
                 <td > ID:</td>
@@ -55,7 +49,7 @@
                 </tr>
         </table>
     </form>
-        <FORM>
+        <div>
             <dl class="important_information">
                 <dt>*공지사항*</dt>
                 <dt>-초기 아이디는 학번, 초기비밀번호는 주민번호앞자리입니다.</dt>
@@ -63,9 +57,8 @@
                 <dt>-초기 로그인 이후 반드시 비밀번호를 변경하시기 바랍니다.</dt>
                 <dt>-초기 로그인 이후 이메일 주소를 반드시 등록하시기 바랍니다.(비밀번호 찾기시 필요)</dt>
             </dl>
-        </FORM>
+        </div>
     </div>
 </div>
-
 
 {% endblock %}
