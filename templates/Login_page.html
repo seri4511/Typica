@@ -1,83 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="Login_page.css">
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
 
 
 
-    <script language="javascript">
-        $(function() {
-            $('#submit_button').click(
-                    function () {
-                        var password = $("#password").val();
-                        var id = $("#ID").val();
-
-                        if (id != "dnwnd2di"){
-                            $("password_waring_caption").html("Check Your ID");
-                            return false;
-                        }
-
-
-                        if (password != "wpswkd18"){
-                            $("#password_waring_caption").html("Check Your password");
-                        }else{
-                            $("#password_waring_caption").html("");
-                            document.forms["login_form"].submit();
-
-                        }
-                        return false;
-
-                    }
-            );
-        });
-
-
-    </script>
 
 
 
-</head>
-<body>
 
-<div id="navi_part">
+<link rel="stylesheet" href="{{ url_for('static', filename='login_page.css')}}">
+{% extends "base.html" %}
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Gachon University</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">내정보 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    <li class="out"><a href="#">로그아웃</a></li>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-</div>
-
-
+{% block content %}
 
 <header id="header">
     <dl class="tema_logo">
@@ -85,7 +16,7 @@
     </dl>
 </header>
 
-
+<form class="form-signin" method="post" action="login_test">
 
 <div id="login_information_area">
     <dl class="login_information">
@@ -93,7 +24,7 @@
         <dt>아이디와 비밀번호를 입력하세요</dt>
     </dl>
 
-    <form id="login_form" action="login_validate.html" method="get" >
+    <form id="login_form" action="login_validate.html" method="POST" >
         <table class="login_input_field">
             <tr id="login_id">
                 <td > ID:</td>
@@ -104,26 +35,26 @@
                 <td>Password: </td>
                 <td><input type="password" class="col-xs-8" name="password" id="password"/> </td>
             </tr>
-</div>
 
-<div id="main_button">
-    <div class="container" >
-        <tr>
-            <td colspan="1">
-                <button type="button" id="submit_button" class="btn btn-info btn-primary btn-lg btn-menu" >로그인</button>
-            </td>
-            <td colspan="1">
 
-                <button type="button" id="searching_button" class="btn btn-info btn-primary btn-lg btn-menu">비밀번호찾기</button>
+        <div id="main_button">
+            <div class="container" >
+                <tr>
+                    <td colspan="1">
+                        <button type="submit" id="submit_button" class="btn btn-info btn-primary btn-lg btn-menu" >로그인</button>
+                    </td>
+                    <td colspan="1">
 
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" id="password_waring_caption">
-            </td>
-        </tr>
+                    <button type="button" id="searching_button" class="btn btn-info btn-primary btn-lg btn-menu">비밀번호찾기</button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="password_waring_caption">
+                    </td>
+                </tr>
         </table>
-
+    </form>
         <FORM>
             <dl class="important_information">
                 <dt>*공지사항*</dt>
@@ -137,11 +68,4 @@
 </div>
 
 
-<div id="footer">
-    <div class="container">
-        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
-    </div>
-</div>
-
-</body>
-</html>
+{% endblock %}
