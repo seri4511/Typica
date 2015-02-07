@@ -5,15 +5,18 @@
 
 {% block content %}
 
-<script>
-  $(document).ready(function(){
-    $("tr").click(function() {
-      $(this).closest("tr").siblings().removeClass("highlighted");
-      $(this).toggleClass("highlighted");
-    })
-  });
-</script>
+<script type="text/javascript">
 
+
+   $(document).ready(function(){
+   $("td").click(function() {
+           alert($("this").number);
+   })
+   });
+   function showDialog(){
+   alert($("this").number);
+   }
+</script>
 
 <div id="B_map">
   <div id="top_B_map" >
