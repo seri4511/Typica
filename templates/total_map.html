@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='total_map.css') }}">
+{% extends "base.html" %}
+
+
+{% block optional_javascript %}
+
+	<!-- script references -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+      <div id="total_map">
+        <div id="A_map">
+          <a href="A_map.html"><img src=" {{  url_for('static', filename='A_map_image.png')}} " class="A_map_size"></a>
+        </div>
+        <div id="C_map">
+          <a href="C_map.html"><img src="C_map_image.png" class="C_map_size"></a>
+        </div>
+        <div id="B_map">
+          <a href="B_map.html"><img src="B_map_image.png" class="B_map_size"></a>
+        </div>
+      </div>
+
+
+{% endblock %}
