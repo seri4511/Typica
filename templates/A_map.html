@@ -10,22 +10,15 @@
 
 <script type="text/javascript">
 
-  /*
+
    $(document).ready(function(){
    $("td").click(function() {
-   showDialog()
+           alert($("this").number);
    })
    });
    function showDialog(){
-   alert(number);
+   alert($("this").number);
    }
-   */
-  $(document).ready(function () {
-    $('.table td').click(function () {
-      $('.table td').css('background-color', 'White');
-      $(this).css('background-color', 'red');
-    });
-  });
 </script>
 <!-- Wrap all page content here -->
 
@@ -36,6 +29,7 @@
       <tr>
         <td class="층" bgcolor="aqua">3층</td>
         <script>
+          var table_id=0;
           var row = 37;
           var number = 19;
           for (number ; number<row; number++){
