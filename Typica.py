@@ -1,4 +1,3 @@
-#-*- coding: utf-8 -*-
 from flask import Flask, render_template, request, make_response, url_for, session, g, redirect
 from flask.ext.mysql import MySQL
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -12,7 +11,7 @@ app = Flask(__name__)
 mysql = MySQL()
 app = Flask(__name__)
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'seri1005'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'wpswkd18^^'
 app.config['MYSQL_DATABASE_DB'] = 'typica_db'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
