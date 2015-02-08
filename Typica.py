@@ -58,9 +58,11 @@ def before_request():
     print type(g.db)
 
 
+@app.route('/')
 @app.route('/login')
 def login():
     return render_template('login_page.html')
+
 
 @app.route('/login_test',  methods=["POST"])
 def login_test():
@@ -113,10 +115,17 @@ def find_password():
     return render_template('find_Password.html')
 
 
-@app.route('/change_first_pw')
+@app.route('/change_first_pw', methods=['GET', 'POST'])
 def change_first_pw():
+    error= None
+    if request.method == 'POST':
+        if request.form['password'] != request.form['password2']:
+            error = 'The two password do not match'
+        elif request.form['email'] != request.form['email2']:
+            error = 'The two email do not match'
+        else:
+            return redirect(url_for('main'))
     return render_template('change_FIrstPassword.html')
-
 
 @app.route('/adminstudent')
 def adminstudent():

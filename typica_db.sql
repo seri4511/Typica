@@ -3,7 +3,7 @@ CREATE TABLE `Student` (
   `StudentName` varchar(45) NOT NULL,
   `StudentBirthDate` date NOT NULL,
   `StudentPW` varchar(45) NOT NULL,
-  `StudentEmai` varchar(45) DEFAULT NULL,
+  `StudentEmail` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idStudent`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
