@@ -1,10 +1,10 @@
-
-
-
-
-<link rel="stylesheet" href="{{ url_for('static', filename='main_page.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='admin.css')}}">
 {% extends "base.html" %}
 
+
+{% block optional_javascript %}
+    <script src="{{ url_for('static', filename='register.js') }}"></script>
+{% endblock %}
 
 {% block content %}
     <style>
@@ -54,7 +54,6 @@
                     <td>리세리</td>
                     <td>19951005</td>
                     <td>seri19951005@gmail.com</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -65,24 +64,24 @@
                 </tr>
             </table>
         </div>
-        <form class="form-inline">
+        <form role="form" id="register_form" name="register_info" method="POST" action="adminstudentregister">
             <div class="form-group">
-                <label for="exampleInputName2">학번</label>
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="201xxxxxx">
+                <label for="studentnumber">학번</label>
+                <input type="text" class="form-control" id="studentnumber" name="id" placeholder="201xxxxxx">
             </div>
             <div class="form-group">
-                <label for="exampleInputName2">이름</label>
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="홍길">
+                <label for="name">이름</label>
+                <input type="text" class="form-control" id="name" name="username" placeholder="홍길">
             </div>
             <div class="form-group">
-                <label for="exampleInputName2">생년월일</label>
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="199xxxxx">
+                <label for="birth">생년월일</label>
+                <input type="text" class="form-control" id="birth" name="birthdate" placeholder="199xxxxx">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail2">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="hong@example.com">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="hong@example.com">
             </div>
-            <button type="submit" class="btn btn-default">추가</button>
+            <button type="submit" class="btn btn-default" id="register_btn">추가</button>
         </form>
     </section>
 

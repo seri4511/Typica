@@ -12,7 +12,7 @@ app = Flask(__name__)
 mysql = MySQL()
 app = Flask(__name__)
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'as147852'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'wpswkd18^^'
 app.config['MYSQL_DATABASE_DB'] = 'typica_db'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
@@ -40,22 +40,27 @@ def init_db():
 def query_db(query, args=(), one=False):
     """Queries the database and returns a list of dictionaries."""
     g.db.execute(query, args)
-    print (g.db)
+    print (g.db), "1"
 
     data = g.db.fetchall()
-    print data
+    print data, "2"
     rv = [dict((g.db.description[idx][0], value)
                for idx, value in enumerate(row)) for row in data]
     return (rv[0] if rv else None) if one else rv
 
 @app.before_request
 def before_request():
-    print ("Start Application")
+    print ("Start Application","3")
     db_connect = connect_db()
     db_connect.autocommit(1)
 
     g.db = db_connect.cursor()
-    print type(g.db)
+    g.user = None
+    print type(g.db), "4"
+    if 'idStudent' in session:
+        g.user= query_db('select * from Student where idStudent = %s',
+                          [session['idStudent']], one=True)
+
 
 
 @app.route('/')
@@ -67,23 +72,32 @@ def login():
 @app.route('/login_test',  methods=["POST"])
 def login_test():
     if request.method == "POST":
-        id = request.form['ID']
+        id = request.form['id']
         password = request.form['password']
+        user =  query_db('''select * from Student where idStudent = %s''', [id], one=True)
+        print password, "0 "
+        print id, "print0"
+        print user, "1"
+        print user['StudentPW'], "3"
 
-        user = query_db('''select * from Studnet where idStudent = %s''', [id], one=True)
-        print user
-        print generate_password_hash(password)
-        print user['StudentPW']
         if check_password_hash(user['StudentPW'], request.form['password']):
 
-            session['user_id'] = user['idStudent']
+            session['idStudent'] = user['idStudent']
+            print "pasword good"
             return render_template('main_page.html')
         else:
-            error = 'Invalid password'
-            return "Error"
+            print "password bad"
+            return render_template('login_page.html')
+        # if check_password_hash(user['UserPassword'], request.form['password']):
+        #
+        #           session['user_id'] = user['StudentID']
+        #           return redirect(url_for('information'))
+        #       else:
+        #           error = 'Invalid password'
+        #           return render_template('login.html', error=error)
 
 
-    return id + " "  + password
+    return "ok"
 
 
 
@@ -127,16 +141,34 @@ def change_first_pw():
             return redirect(url_for('main'))
     return render_template('change_FIrstPassword.html')
 
-@app.route('/adminstudent')
+@app.route('/adminstudent' )
 def adminstudent():
     return render_template('adminStudent.html')
 
+
+@app.route('/adminstudentregister', methods=["POST"])
+def insert_new_user():
+    if request.method == "POST":
+        print "17"
+        idd = request.form['id']
+        name = request.form['username']
+        birth = request.form['birthdate']
+        password = generate_password_hash(request.form['birthdate'])
+        email = request.form['email']
+        print "18"
+        g.db.execute('''insert into Student (idStudent, StudentName, StudentBirthDate, StudentPW, StudentEmail) values (%s, %s, %s, %s, %s)''', [idd, name, birth, password, email])
+        print "19"
+        return render_template('main_page.html')
+    print "20"
+    return "error"
+
 @app.route('/adminfee')
-def adminfee():
+def adminfee_register():
     return render_template('adminStudentFee.html')
 
 
 
 if __name__ == '__main__':
+    app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
     app.debug = True
     app.run()
