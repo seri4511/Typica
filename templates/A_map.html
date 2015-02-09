@@ -13,22 +13,24 @@
 
    $(document).ready(function(){
    $("td").click(function() {
-           alert($("this").number);
+           showDialog();
    })
    });
    function showDialog(){
-   alert($("this").number);
+   alert(number);
    }
 </script>
 <!-- Wrap all page content here -->
-'[
+
 
 <div id="body" >
-  <div class="A_first">
-    <table border="1">
-      <tr>
-        <td class="층" bgcolor="aqua">3층</td>
-        <script>
+    <table>
+        <div class="A_first">
+
+            <table border="1">
+                <tr>
+                    <th class="층" bgcolor="aqua">3층</th>
+                    <script>
           var table_id=0;
           var row = 37;
           var number = 19;
@@ -36,10 +38,11 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-      </tr>
-      <tr>
-        <td class="층" bgcolor="aqua">2층</td>
-        <script>
+                </tr>
+                <tr>
+                    <th class="층" bgcolor="aqua">2층</th>
+                    <script>
+          var tableid=0 ;
           var row = 55;
           var number = 37;
           for (number ; number<row; number++){
@@ -47,10 +50,10 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-      </tr>
-      <tr>
-        <td class="층" bgcolor="aqua">1층</td>
-        <script>
+                </tr>
+                <tr>
+                    <th class="층" bgcolor="aqua">1층</th>
+                    <script>
           var row = 73;
           var number = 55;
           for (number ; number<row; number++){
@@ -58,50 +61,50 @@
           }
 
         </script>
-      </tr>
-    </table>
-  </div>
-  <div class="A_second">
-    <table border="1" style="float: left">
-      <tr>
-        <td>6</td>
-        <td>12</td>
-        <td>18</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>11</td>
-        <td>17</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>10</td>
-        <td>16</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>9</td>
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>8</td>
-        <td>14</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>7</td>
-        <td>13</td>
-      </tr>
-      <tr>
-        <td class="층" bgcolor="aqua">3층</td>
-        <td class="층" bgcolor="aqua">2층</td>
-        <td class="층" bgcolor="aqua">1층</td>
-      </tr>
-    </table>
-    <table border="1" style="float: left">
-      <tr>
-        <script>
+                </tr>
+            </table>
+        </div>
+        <div class="A_second">
+            <table border="1" style="float: left">
+                <tr>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>11</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <th class="층" bgcolor="aqua">3층</th>
+                    <th class="층" bgcolor="aqua">2층</th>
+                    <th class="층" bgcolor="aqua">1층</th>
+                </tr>
+            </table>
+            <table border="1" style="float: left">
+                <tr>
+                    <script>
           var row = 106;
           var number = 100;
           for (number ; number<row; number++){
@@ -109,10 +112,10 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">4층</td>
-      </tr>
-      <tr>
-        <script>
+                    <th class="층" bgcolor="aqua">4층</th>
+                </tr>
+                <tr>
+                    <script>
           var row = 112;
           var number = 106;
           for (number ; number<row; number++){
@@ -120,92 +123,92 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">3층</td>
-      </tr>
-      <tr>
-        <script>
+                    <th class="층" bgcolor="aqua">3층</th>
+                </tr>
+                <tr>
+                    <script>
           var row = 118;
           var number = 112;
           for (number ; number<row; number++){
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">2층</td>
-      </tr>
-      <tr>
-        <script>
+                    <th class="층" bgcolor="aqua">2층</th>
+                </tr>
+                <tr>
+                    <script>
           var row = 124;
           var number = 118;
           for (number ; number<row; number++){
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">1층</td>
-      </tr>
-    </table>
-    <table border="1" style="float: left">
-      <tr>
-        <td>91</td>
-        <td>82</td>
-        <td>73</td>
-      </tr>
-      <tr>
-        <td>92</td>
-        <td>83</td>
-        <td>74</td>
-      </tr>
-      <tr>
-        <td>93</td>
-        <td>84</td>
-        <td>75</td>
-      </tr>
-      <tr>
-        <td>94</td>
-        <td>85</td>
-        <td>76</td>
-      </tr>
-      <tr>
-        <td>95</td>
-        <td>86</td>
-        <td>77</td>
-      </tr>
-      <tr>
-        <td>96</td>
-        <td>87</td>
-        <td>78</td>
-      </tr>
-      <tr>
-        <td>97</td>
-        <td>88</td>
-        <td>79</td>
-      </tr>
-      <tr>
-        <td>98</td>
-        <td>89</td>
-        <td>80</td>
-      </tr>
-      <tr>
-        <td>99</td>
-        <td>90</td>
-        <td>81</td>
-      </tr>
-      <tr>
-        <td class="층" bgcolor="aqua">1층</td>
-        <td class="층" bgcolor="aqua">2층</td>
-        <td class="층" bgcolor="aqua">3층</td>
-      </tr>
-    </table>
-  </div>
-  <div class="A_third">
-    <table id="notimportant" border="1" style="float: left">
-      <tr>
-        <td>501호</td>
-        <td>계단</td>
-      </tr>
-    </table>
-    <table border="1" style="float: left" >
-      <tr>
-        <script>
+                    <th class="층" bgcolor="aqua">1층</th>
+                </tr>
+            </table>
+            <table border="1" style="float: left">
+                <tr>
+                    <td>91</td>
+                    <td>82</td>
+                    <td>73</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>83</td>
+                    <td>74</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>84</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>94</td>
+                    <td>85</td>
+                    <td>76</td>
+                </tr>
+                <tr>
+                    <td>95</td>
+                    <td>86</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>96</td>
+                    <td>87</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td>97</td>
+                    <td>88</td>
+                    <td>79</td>
+                </tr>
+                <tr>
+                    <td>98</td>
+                    <td>89</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>99</td>
+                    <td>90</td>
+                    <td>81</td>
+                </tr>
+                <tr>
+                    <th class="층" bgcolor="aqua">1층</th>
+                    <th class="층" bgcolor="aqua">2층</th>
+                    <th class="층" bgcolor="aqua">3층</th>
+                </tr>
+            </table>
+        </div>
+        <div class="A_third">
+            <table id="notimportant" border="1" style="float: left">
+                <tr>
+                    <th>501호</th>
+                    <th>계단</th>
+                </tr>
+            </table>
+            <table border="1" style="float: left" >
+                <tr>
+                    <script>
           var row = 130;
           var number = 124;
           for (number; number<row; number++){
@@ -213,10 +216,10 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">4층</td>
-      </tr>
-      <tr>
-        <script>
+                    <th class="층" bgcolor="aqua">4층</th>
+                </tr>
+                <tr>
+                    <script>
           var row = 136;
           var number = 130;
           for (number; number<row; number++){
@@ -224,10 +227,10 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">3층</td>
-      </tr>
-      <tr>
-        <script>
+                    <th class="층" bgcolor="aqua">3층</th>
+                </tr>
+                <tr>
+                    <script>
           var row = 142;
           var number = 136;
           for (number ; number<row; number++){
@@ -235,10 +238,10 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">2층</td>
-      </tr>
-      <tr>
-        <script>
+                    <th class="층" bgcolor="aqua">2층</th>
+                </tr>
+                <tr>
+                    <script>
           var row = 148;
           var number = 142;
           for (number ; number<row; number++){
@@ -246,10 +249,11 @@
             document.write("<td>"+number+"</td>");
           }
         </script>
-        <td class="층" bgcolor="aqua">1층</td>
-      </tr>
+                    <th class="층" bgcolor="aqua">1층</th>
+                </tr>
+            </table>
+        </div>
     </table>
-  </div>
 </div>
 
 <!-- script references -->
