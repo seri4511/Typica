@@ -1,9 +1,20 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='admin.css')}}">
 {% extends "base.html" %}
 
+{% block optional_css %}
+<!-- Latest compiled and minified CSS -->
+<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.5.0/bootstrap-table.min.css">-->
+{% endblock %}
 
 {% block optional_javascript %}
-    <script src="{{ url_for('static', filename='register.js') }}"></script>
+<script src="{{ url_for('static', filename='register.js') }}"></script>
+
+<script src="{{ url_for('static', filename='serverlist.js') }}"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.5.0/bootstrap-table.min.js"></script>
+
+<!-- Latest compiled and minified Locales -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.5.0/locale/bootstrap-table-zh-CN.min.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -39,31 +50,73 @@
 
 
     <section>
-        <div id="content">
-            <table class="table">
-                <tr>
-                    <th>#</th>
-                    <th>학번</th>
-                    <th>학생 이름</th>
-                    <th>생년월일</th>
-                    <th>E-mail</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>201433261</td>
-                    <td>리세리</td>
-                    <td>19951005</td>
-                    <td>seri19951005@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>201433265</td>
-                    <td>홍길동</td>
-                    <td>19942093</td>
-                    <td>3sjdhsk@gmail.com</td>
-                </tr>
-            </table>
-        </div>
+        <!--<div class="container">-->
+            <!--<div class="col-md-offset-9 col-md-3">-->
+                <!--<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#modify-form">-->
+                    <!--<span class="glyphicon glyphicon-ok" aria-hidden="false">Modify</span>-->
+                <!--</button>-->
+                <!--<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#delete-form">-->
+                    <!--<span class="glyphicon glyphicon-remove" aria-hidden="false">Delete</span>-->
+                <!--</button>-->
+
+            <!--</div>-->
+        <!--</div>-->
+        <br/>
+        <table data-toggle="table" data-url="serverdata" data-cache="false" id="server-list-table"
+               class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th data-field="state" data-radio="true"></th>
+                <th data-field="idStudent">ID</th>
+                <th data-field="StudentName">Name</th>
+                <th data-field="StudentBirthDate">Birthdate</th>
+                <th data-field="StudentEmail">Email </th>
+            </tr>
+            </thead>
+
+            <!--<tfoot>-->
+            <!--<tr>-->
+                <!--<th data-field="state" data-radio="true"></th>-->
+                <!--<th data-field="idStudent">ID</th>-->
+                <!--<th data-field="StudentName">Name</th>-->
+                <!--<th data-field="StudentBirthDate">Birthdate</th>-->
+                <!--<th data-field="StudentEmail">Email </th>-->
+            <!--</tr>-->
+            <!--</tfoot>-->
+        </table>
+
+
+        <!--<div id="content">-->
+            <!--<table class="table">-->
+                <!--<tr>-->
+                    <!--<th>#</th>-->
+                    <!--<th>학번</th>-->
+                    <!--<th>학생 이름</th>-->
+                    <!--<th>생년월일</th>-->
+                    <!--<th>E-mail</th>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>1</td>-->
+                    <!--<td>201433261</td>-->
+                    <!--<td>리세리</td>-->
+                    <!--<td>19951005</td>-->
+                    <!--<td>seri19951005@gmail.com</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>2</td>-->
+                    <!--<td>201433265</td>-->
+                    <!--<td>홍길동</td>-->
+                    <!--<td>19942093</td>-->
+                    <!--<td>3sjdhsk@gmail.com</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+        <!--</div>-->
+
+
+
+
+
+
         <form role="form" id="register_form" name="register_info" method="POST" action="adminstudentregister">
             <div class="form-group">
                 <label for="studentnumber">학번</label>
@@ -86,8 +139,5 @@
     </section>
 
 
-    <!-- script references -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 
 {% endblock %}

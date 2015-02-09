@@ -6,7 +6,6 @@
     <title>Fixed Nav + Sticky Footer</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='bootstrap.min.js')}}"></script>
     <link href="{{ url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
@@ -15,6 +14,14 @@
     <![endif]-->
     <link href="{{ url_for('static', filename='styles.css')}}" rel="stylesheet">
 
+
+    {% block optional_css %}
+    {% endblock %}
+
+    {% block optional_javascript %}
+    {% endblock %}
+
+</head>
 
 
 

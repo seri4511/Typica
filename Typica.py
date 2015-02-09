@@ -139,7 +139,13 @@ def change_first_pw():
             error = 'The two email do not match'
         else:
             return redirect(url_for('main'))
-    return render_template('change_FIrstPassword.html')
+    return render_template('change_FIrstPassword.html', error=error)
+
+#This is for Typica
+@app.route('/serverdata')
+def transferdata():
+    json_data = query_db('''select idStudent, StudentName, StudentBirthDate, StudentPW, StudentEmail from Student''')
+    return json.dumps(json_data)
 
 @app.route('/adminstudent' )
 def adminstudent():
