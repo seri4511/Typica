@@ -8,21 +8,20 @@
 <script type="text/javascript">
 
 
+
    $(document).ready(function(){
    $("td").click(function() {
-           alert($("this").number);
+           alert($(this).html());
    })
    });
-   function showDialog(){
-   alert($("this").number);
-   }
+
 </script>
 
 <div id="B_map">
   <div id="top_B_map" >
     <table border="1" id="notimportant" >
-      <td>화장실</td>
-      <td>과실</td>
+      <th>화장실</th>
+      <th>과실</th>
     </table>
   </div>
   <div id="B_body_first" style="float: left">

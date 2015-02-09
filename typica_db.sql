@@ -1,7 +1,7 @@
 CREATE TABLE `Student` (
   `idStudent` int(11) NOT NULL,
   `StudentName` varchar(45) NOT NULL,
-  `StudentBirthDate` date NOT NULL,
+  `StudentBirthDate` int(11)  NOT NULL,
   `StudentPW` varchar(255) NOT NULL,
   `StudentEmail` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idStudent`)

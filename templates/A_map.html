@@ -13,12 +13,10 @@
 
    $(document).ready(function(){
    $("td").click(function() {
-           showDialog();
+           alert($(this).html());
    })
    });
-   function showDialog(){
-   alert(number);
-   }
+
 </script>
 <!-- Wrap all page content here -->
 
@@ -47,7 +45,7 @@
           var number = 37;
           for (number ; number<row; number++){
 
-            document.write("<td>"+number+"</td>");
+            document.write("<td id='cabinet_"+number+ "'>"+number+"</td>");
           }
         </script>
                 </tr>
