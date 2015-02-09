@@ -1,9 +1,16 @@
 #body{
-    margin: 8% 20% 0;
+    margin: 5% 20% 0;
     font-size: 13pt;
 }
+table{
+    margin-left: 200px;
+    margin-top: 50px;
+    width: 15%;
+    height: 20%;
+    text-align: center;
+}
 .A_first{
-    margin-left: 30px;
+    margin-left: 100px;
 }
 .A_third{
     clear: both;
@@ -12,13 +19,7 @@
 .A_second{
     margin: 30px;
 }
-table{
-    margin-left: 150px;
-    margin-top: 50px;
-    width: 15%;
-    height: 20%;
-    text-align: center;
-}
+
 #notimportant{
     height : 80 px;
 }
@@ -30,4 +31,7 @@ table{
 td:hover, td.alt:hover {
     color: #261F1D;
     background-color: #E5C37E;
+}
+th{
+text-align: center;
 }

@@ -1,73 +1,264 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Fixed Nav + Sticky Footer</title>
-    <meta name="generator" content="Bootply" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="css/styles.css" rel="stylesheet">
-</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='C_map.css')}}">
+{% extends "base.html" %}
 
 
+{% block content %}
 
 <script type="text/javascript">
 
 
    $(document).ready(function(){
    $("td").click(function() {
-           alert($("this").number);
+           showDialog();
    })
    });
    function showDialog(){
    alert($("this").number);
    }
 </script>
-<body>
-<!-- Wrap all page content here -->
-<div id="navi_part">
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="main_page.html">Gachon University</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">내정보 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    <li class="out"><a href="#">로그아웃</a></li>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-</div>
 
 <div id="C_map">
-
-</div>
-
-<div id="footer">
-    <div class="container">
-        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+    <div>
+        <table border="1" class="notimportant">
+            <tr><th>창고</th></tr>
+        </table>
+        <table border="1" class="notimportant">
+            <tr><th><-계단</th></tr>
+        </table>
+        <table border="1" class="notimportant">
+            <tr><th>->계단</th></tr>
+        </table>
+    </div>
+    <div id="C_body_first">
+        <table border="1">
+            <tr>
+                <script>
+                    var row = 400;
+                    var number = 424;
+                    for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                     }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                  var row = 401;
+                  var number = 425;
+                  for (number ; number>=row; number=number - 12){
+                    document.write("<td>"+number+"</td>");
+                  }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 402;
+                    var number = 426;
+                      for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                     }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 403;
+                    var number = 427;
+                    for (number ; number>=row; number=number - 12){
+                     document.write("<td>"+number+"</td>");
+                    }
+                 </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 404;
+                    var number = 428;
+                    for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                    }
+                 </script>
+            </tr>
+            <tr>
+                <script>
+                     var row = 405;
+                     var number = 429;
+                     for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                    }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 406;
+                    var number = 430;
+                    for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                    }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 407;
+                    var number = 431;
+                    for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                    }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 408;
+                    var number = 432;
+                    for (number ; number>=row; number=number - 12){
+                      document.write("<td>"+number+"</td>");
+                    }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 409;
+                    var number = 433;
+                    for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                    }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 410;
+                    var number = 434;
+                    for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                    }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                    var row = 411;
+                    var number = 435;
+                    for (number ; number>=row; number=number - 12){
+                        document.write("<td>"+number+"</td>");
+                    }
+                 </script>
+            </tr>
+            <tr>
+                <th class="층" bgcolor="aqua">1층</th>
+                <th class="층" bgcolor="aqua">2층</th>
+                <th class="층" bgcolor="aqua">3층</th>
+            </tr>
+        </table>
+    </div>
+    <div id="id="C_body_second"">
+        <table border="1">
+            <tr>
+                <script>
+                    var row = 436;
+                    var number = 445;
+                    for (number ; number>=row; number=number - 3){
+                        document.write("<td>"+number+"</td>");
+                    }
+                </script>
+            </tr>
+            <tr>
+                <script>
+                      var row = 437;
+                      var number = 446;
+                      for (number ; number>=row; number=number - 3){
+                        document.write("<td>"+number+"</td>");
+                      }
+                    </script>
+            </tr>
+            <tr>
+                <script>
+                      var row = 438;
+                      var number = 447;
+                      for (number ; number>=row; number=number - 3){
+                        document.write("<td>"+number+"</td>");
+                      }
+                    </script>
+            </tr>
+            <tr>
+                <th class="층" bgcolor="aqua">1층</th>
+                <th class="층" bgcolor="aqua">2층</th>
+                <th class="층" bgcolor="aqua">3층</th>
+                <th class="층" bgcolor="aqua">4층</th>
+            </tr>
+        </table>
+    </div>
+    <div id="id="C_body_third"">
+        <table border="1">
+            <tr>
+                <th class="층" bgcolor="aqua">3층</th>
+                <script>
+                      var row = 357;
+                      var number = 349;
+                      for (number ; number<=row; number=number + 1){
+                        document.write("<td>"+number+"</td>");
+                      }
+                    </script>
+            </tr>
+            <tr>
+                <th class="층" bgcolor="aqua">2층</th>
+                <script>
+                      var row = 366;
+                      var number = 358;
+                      for (number ; number<=row; number=number + 1){
+                        document.write("<td>"+number+"</td>");
+                      }
+                    </script>
+            </tr>
+            <tr>
+                <th class="층" bgcolor="aqua">1층</th>
+                <script>
+                      var row = 375;
+                      var number = 367;
+                      for (number ; number<=row; number=number + 1){
+                        document.write("<td>"+number+"</td>");
+                      }
+                    </script>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <script>
+                      var row = 381;
+                      var number = 376;
+                      for (number ; number<=row; number=number + 1){
+                        document.write("<td>"+number+"</td>");
+                      }
+                </script>
+                <th class="층" bgcolor="aqua">1층</th>
+            </tr>
+            <tr>
+                <script>
+                      var row = 387;
+                      var number = 382;
+                      for (number ; number<=row; number=number+ 1){
+                        document.write("<td>"+number+"</td>");
+                      }
+                </script>
+                <th class="층" bgcolor="aqua">1층</th>
+            </tr>
+            <tr>
+                <script>
+                  var row = 393;
+                  var number = 388;
+                  for (number ; number<=row; number=number + 1){
+                    document.write("<td>"+number+"</td>");
+                  }
+                </script>
+                <th class="층" bgcolor="aqua">1층</th>
+            </tr>
+            <tr>
+                <script>
+                  var row = 399;
+                  var number = 394;
+                  for (number ; number<=row; number=number + 1){
+                    document.write("<td>"+number+"</td>");
+                  }
+                </script>
+                <th class="층" bgcolor="aqua">1층</th>
+            </tr>
+        </table>
     </div>
 </div>
 
@@ -78,3 +269,4 @@
 </body>
 
 </html>
+{% endblock %}
